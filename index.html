@@ -3,6 +3,7 @@
 	<head>
 		<meta charset ="utf-8">
 		<title> Test game punch bag </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link href="style.css" rel="stylesheet" />
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	</head>
@@ -18,9 +19,14 @@
 				<div v-bind:style="{width:health + '%'}"> </div>
 			</div>
 
-			<div id="controls">
-				<button v-on:click="punch" v-show="!ended">Punch</button>
-				<button v-on:click="restart">Restart</button>
+			<div class="container">
+				<div class="text-center">
+
+					<button class="btn btn-danger" v-on:click="punch" v-show="!ended">Punch</button>
+
+					<button  class="btn btn-primary" v-on:click="restart">Restart</button>
+					
+				</div>
 			</div>
 
 		</div>
